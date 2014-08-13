@@ -8,7 +8,7 @@ else
   MongoMapper.setup({"development" => { "host" => "localhost", "database" => "builda_development", "port" => 27017}}, 'development')
 end
 
-CONFIG = TOML.load_file("setup.toml")
+CONFIG = TOML.load_file("./setup.toml")
 
 # SETUP
 GITHUB_TOKEN = CONFIG['setup']['github_token']
