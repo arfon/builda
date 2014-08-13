@@ -1,0 +1,10 @@
+# Config for setup
+[setup]
+github_token = "yourgithubtoken"
+builda_location = "http://builda.example.com"
+
+[repos]
+  [repos.your_repo_name]
+  name = "your_repo
+  location = "https://github.com/you/your_repo"
+  secret = "shhh-its-a-secret"

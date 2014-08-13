@@ -1,4 +1,4 @@
-%w{rubygems sinatra mongo_mapper digest pry multi_json octokit sidekiq oauth}.each { |dep| require dep }
+%w{rubygems sinatra mongo_mapper digest pry multi_json octokit sidekiq oauth toml}.each { |dep| require dep }
 
 if ENV['MONGOHQ_URL']
   uri = URI.parse(ENV['MONGOHQ_URL'])
@@ -8,6 +8,11 @@ else
   MongoMapper.setup({"development" => { "host" => "localhost", "database" => "builda_development", "port" => 27017}}, 'development')
 end
 
+CONFIG = TOML.load_file("setup.toml")
+
+# SETUP
+GITHUB_TOKEN = CONFIG['setup']['github_token']
+BUILDA_LOCATION = CONFIG['setup']['builda_location']
 
 class Repository
   include MongoMapper::Document
