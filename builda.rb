@@ -1,4 +1,4 @@
-["rubygems", "sinatra", "mongo_mapper", "digest", "pry", "multi_json", "octokit", "sidekiq", "oauth", "toml", "active_support", "active_support/core_ext"].each { |dep| require dep }
+["rubygems", "sinatra", "mongo_mapper", "digest", "pry", "multi_json", "octokit", "sidekiq", "oauth", "toml", "active_support/all"].each { |dep| require dep }
 
 if ENV['MONGOHQ_URL']
   uri = URI.parse(ENV['MONGOHQ_URL'])
