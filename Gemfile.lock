@@ -38,7 +38,7 @@ GEM
     oauth (0.4.7)
     octokit (3.3.0)
       sawyer (~> 0.5.3)
-    parslet (1.5.0)
+    parslet (1.6.1)
       blankslate (~> 2.0)
     plucky (0.6.6)
       mongo (~> 1.5)
@@ -70,8 +70,8 @@ GEM
     thread_safe (0.3.4)
     tilt (1.4.1)
     timers (1.1.0)
-    toml (0.1.1)
-      parslet (~> 1.5.0)
+    toml (0.0.3)
+      parslet
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
 
@@ -79,6 +79,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (~> 4.1.4)
   bson_ext
   mongo_mapper
   multi_json (= 1.6.1)
@@ -88,4 +89,4 @@ DEPENDENCIES
   rake
   sidekiq
   sinatra
-  toml
+  toml (= 0.0.3)

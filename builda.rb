@@ -1,4 +1,4 @@
-%w{rubygems sinatra mongo_mapper digest pry multi_json octokit sidekiq oauth toml}.each { |dep| require dep }
+%w{rubygems sinatra mongo_mapper digest pry multi_json octokit sidekiq oauth toml active_support}.each { |dep| require dep }
 
 if ENV['MONGOHQ_URL']
   uri = URI.parse(ENV['MONGOHQ_URL'])
